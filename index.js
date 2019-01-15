@@ -1,16 +1,13 @@
 $(function() {
 
-  // event.preventDefault();
+  $("button.shopping-item-toggle").on("click", function( event ) {
+      $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
+  });
 
-$("button.shopping-item-toggle").on("click", function( event ) {
-    console.log('here2');
-    $(this).closest("span.shopping-item").toggleClass("shopping-item__checked");
-});
-
-$("button.shopping-item-delete").on("click", function( event ) {
-    console.log('here1');
-    $(this).closest("li").remove();
-});
+  $("button.shopping-item-delete").on("click", function( event ) {
+      console.log('here1');
+      $(this).closest("li").remove();
+  });
 
 
 /*
